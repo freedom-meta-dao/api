@@ -1,0 +1,23 @@
+service: freedom-meta-dao-api
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+custom:
+  esbuild:
+    minify: true
+    keepNames: true
+    packager: yarn
+    bundle: true
+    watch:
+      pattern: ['./src/handler.ts', './src/*.ts', './src/**/*.ts'] # default .
+      ignore: ['.serverless/**/*', './dist', '.build'] # default ['.build', 'dist', 'node_modules']
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  main:
+    handler: src/main.handler

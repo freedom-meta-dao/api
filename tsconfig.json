@@ -1,0 +1,44 @@
+{
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts",
+		"tests",
+		"dist/**",
+		"gulpfile.*"
+	],
+	"include": [
+		"./src/main.ts",
+		"./src/*.ts",
+		"./src/**/*.ts"
+	],
+	"filesGlob": ["./src/main.ts", "./src/*.ts", "./src/**/*.ts"],
+	"compilerOptions": {
+		"rootDir": "./src",
+		"preserveConstEnums": true,
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"jsx": "preserve",
+		"target": "es2015",
+		"traceResolution": false,
+		"lib": ["es6", "dom", "esnext"],
+		"isolatedModules": false,
+		"removeComments": true,
+		"declaration": true,
+		"sourceMap": true,
+		"outDir": "./dist",
+		"allowUnreachableCode": false,
+		"strictNullChecks": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"alwaysStrict": true,
+		"noImplicitUseStrict": false
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		},
+		"swc": true
+	}
+}
