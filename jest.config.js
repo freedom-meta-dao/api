@@ -1,5 +1,6 @@
 module.exports = {
 	roots: ['./'],
+	testEnvironment: 'jsdom',
 	coverageDirectory: './coverage',
 	coveragePathIgnorePatterns: [
 		'.eslintrc.js',
@@ -12,9 +13,6 @@ module.exports = {
 		'docs/'
 	],
 	moduleFileExtensions: ['ts', 'js', 'json'],
-	moduleNameMapper: {
-		'^src/(.*)': '<rootDir>/src/$1'
-	},
 	testPathIgnorePatterns: [
 		'.eslintrc.js',
 		'node_modules/',
@@ -26,6 +24,6 @@ module.exports = {
 	testRegex: '(/__tests__/.*|(\\.|/)(spec))\\.ts$',
 	testResultsProcessor: 'jest-sonar-reporter',
 	transform: {'^.+\\.(t|j)sx?$': '@swc/jest'},
-	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
-	testEnvironment: 'jsdom'
+	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)']
+
 };

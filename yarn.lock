@@ -1093,7 +1093,7 @@
   dependencies:
     "@swc/core" "^1.2.172"
 
-"@swc-node/register@^1.4.0", "@swc-node/register@^1.4.2", "@swc-node/register@^1.5.1":
+"@swc-node/register@^1.4.0", "@swc-node/register@^1.4.2":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@swc-node/register/-/register-1.5.1.tgz#8927783c1a53207ded076d8700270f7941aa0305"
   dependencies:
@@ -1162,7 +1162,7 @@
   version "1.2.179"
   resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.179.tgz#b943acee73a42763b9734a70a89d59a1228ecd14"
 
-"@swc/core@^1.2.172", "@swc/core@^1.2.178":
+"@swc/core@^1.2.172", "@swc/core@^1.2.179":
   version "1.2.179"
   resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.2.179.tgz#9256b4d20a10b4b7d85e2b0fd7fc67aeaed2eb95"
   optionalDependencies:
@@ -1186,7 +1186,7 @@
   dependencies:
     tslib "^2.4.0"
 
-"@swc/jest@^0.2.20":
+"@swc/jest@^0.2.21":
   version "0.2.21"
   resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.21.tgz#e8c4e234016a914f4cfbb7d75844860a250c1d1c"
   dependencies:

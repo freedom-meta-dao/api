@@ -3,31 +3,33 @@
 	"include": ["./src/main.ts", "./src/*.ts", "./src/**/*.ts"],
 	"filesGlob": ["./src/main.ts", "./src/*.ts", "./src/**/*.ts"],
 	"compilerOptions": {
-		"rootDir": "./src",
-		"preserveConstEnums": true,
-		"module": "commonjs",
-		"esModuleInterop": true,
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"jsx": "preserve",
-		"target": "es2015",
-		"traceResolution": false,
-		"lib": ["es6", "dom", "esnext", "es2015"],
-		"isolatedModules": false,
-		"removeComments": true,
-		"declaration": true,
-		"sourceMap": true,
-		"outDir": "./dist",
 		"allowUnreachableCode": false,
-		"strictNullChecks": true,
-		"strictBindCallApply": true,
-		"strictPropertyInitialization": true,
 		"alwaysStrict": true,
-		"noImplicitUseStrict": false
+		"baseUrl": ".",
+		"declaration": true,
+		"esModuleInterop": true,
+		"isolatedModules": false,
+		"jsx": "preserve",
+		"lib": ["es6", "dom", "esnext", "es2015"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noImplicitUseStrict": false,
+		"outDir": "./dist",
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"rootDir": "./src",
+		"sourceMap": true,
+		"strictBindCallApply": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"target": "es2015",
+		"traceResolution": false
 	},
 	"ts-node": {
 		"compilerOptions": {
-			"module": "commonjs"
+			"module": "commonjs",
+			"sourceMap": false
 		},
 		"swc": true
 	}
