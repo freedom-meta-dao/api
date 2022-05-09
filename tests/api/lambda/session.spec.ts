@@ -47,10 +47,6 @@ function mockEvent(): APIGatewayProxyEvent {
 	};
 }
 
-/**
- * @jest-environment jsdom
- * @jest-environment-options {"url": "https://jestjs.io/"}
- */
 describe('ApiLambdaSession', () => {
 	let instance: ApiLambdaSession;
 	let event: APIGatewayProxyEvent;
