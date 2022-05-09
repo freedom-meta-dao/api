@@ -9,7 +9,7 @@ module.exports = {
 		'jest/',
 		'node_modules/',
 		'tests/',
-		'docs/',
+		'docs/'
 	],
 	moduleFileExtensions: ['ts', 'js', 'json'],
 	moduleNameMapper: {
