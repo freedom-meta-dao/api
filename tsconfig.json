@@ -3,6 +3,7 @@
 	"include": ["./src/main.ts", "./src/*.ts", "./src/**/*.ts"],
 	"filesGlob": ["./src/main.ts", "./src/*.ts", "./src/**/*.ts"],
 	"compilerOptions": {
+		"allowJs": true,
 		"allowUnreachableCode": false,
 		"alwaysStrict": true,
 		"baseUrl": ".",

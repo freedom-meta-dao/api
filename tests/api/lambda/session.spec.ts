@@ -1,5 +1,5 @@
 import {APIGatewayProxyEvent} from 'aws-lambda';
-import {ApiLambdaSession} from '../../../src/api/lambda/session';
+//import {ApiLambdaSession} from '../../../src/api/lambda/session';
 
 function mockEvent(): APIGatewayProxyEvent {
 	return {
@@ -48,12 +48,12 @@ function mockEvent(): APIGatewayProxyEvent {
 }
 
 describe('ApiLambdaSession', () => {
-	let instance: ApiLambdaSession;
+	//let instance: ApiLambdaSession;
 	let event: APIGatewayProxyEvent;
 
 	beforeAll(() => {
 		event = mockEvent();
-		instance = new ApiLambdaSession(event);
+		//instance = new ApiLambdaSession(event);
 	});
 
 	beforeEach(() => {
@@ -62,7 +62,7 @@ describe('ApiLambdaSession', () => {
 
 	describe('Constructor', () => {
 		it(`should create and populate user property`, () => {
-			const custom = new ApiLambdaSession(event);
+			//const custom = new ApiLambdaSession(event);
 		});
 	});
 });

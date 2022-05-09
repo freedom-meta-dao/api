@@ -1,29 +1,36 @@
 module.exports = {
 	roots: ['./'],
-	testEnvironment: 'jsdom',
 	coverageDirectory: './coverage',
 	coveragePathIgnorePatterns: [
 		'.eslintrc.js',
 		'.node/',
 		'coverage/',
+		'docs/',
 		'jest.config.js',
 		'jest/',
 		'node_modules/',
 		'tests/',
-		'docs/'
+		'webpack.config.js',
+		'webpack.dev.js'
 	],
 	moduleFileExtensions: ['ts', 'js', 'json'],
+	moduleNameMapper: {
+		'^src/(.*)': '<rootDir>/src/$1'
+	},
+	setupFiles: ['jest-canvas-mock'],
+	testEnvironment: 'jsdom',
 	testPathIgnorePatterns: [
-		'.eslintrc.js',
-		'node_modules/',
-		'coverage/',
-		'gulp.ts',
 		'./jest.config.js',
-		'./webpack.*.ts'
+		'./webpack.*.js',
+		'./webpack.*.ts',
+		'.eslintrc.js',
+		'coverage/',
+		'gulp.js',
+		'gulp.ts',
+		'node_modules/'
 	],
 	testRegex: '(/__tests__/.*|(\\.|/)(spec))\\.ts$',
 	testResultsProcessor: 'jest-sonar-reporter',
 	transform: {'^.+\\.(t|j)sx?$': '@swc/jest'},
-	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
-	extensionsToTreatAsEsm: ['.tsx', '.tsx']
+	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)']
 };
