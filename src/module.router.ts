@@ -1,4 +1,4 @@
-import CommunityRootRouter from './module/community/root.router';
+import CommunityRootRouter from './community/root.router';
 import {Router} from 'express';
 
 const router: Router = Router();

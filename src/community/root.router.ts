@@ -1,7 +1,7 @@
 import express, {Router} from 'express';
 
-import {ApiLambdaRequest} from '../../api/lambda/request';
-import {ApiLambdaResponse} from '../../api/lambda/response';
+import {ApiLambdaRequest} from '../api/lambda/request';
+import {ApiLambdaResponse} from '../api/lambda/response';
 import {uIntMake} from '@toreda/strong-types';
 
 const router: Router = Router();

@@ -1,5 +1,5 @@
 import type {APIGatewayProxyEvent} from 'aws-lambda';
-import {APILambdaSessionUser} from './session/user';
+import {ApiLambdaSessionUser} from './session/user';
 import {StrongMap} from '@toreda/strong-types';
 
 /**
@@ -11,11 +11,11 @@ import {StrongMap} from '@toreda/strong-types';
  * @category API
  */
 export class ApiLambdaSession extends StrongMap {
-	public readonly user: APILambdaSessionUser;
+	public readonly user: ApiLambdaSessionUser;
 
 	constructor(event: APIGatewayProxyEvent) {
 		super();
-		this.user = new APILambdaSessionUser();
+		this.user = new ApiLambdaSessionUser();
 		this.loadEvent(event);
 	}
 

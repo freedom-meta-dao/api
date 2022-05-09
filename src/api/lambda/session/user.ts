@@ -8,7 +8,7 @@ import {StrongMap, boolMake, textMake} from '@toreda/strong-types';
  *
  * @category API
  */
-export class APILambdaSessionUser extends StrongMap {
+export class ApiLambdaSessionUser extends StrongMap {
 	public readonly uid: Text;
 	public readonly sid: Text;
 	public readonly skey: Text;
