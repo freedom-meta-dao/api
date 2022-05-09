@@ -61,7 +61,7 @@
 		"transpile": "yarn gulp",
 		"make:docs": "yarn typedoc docs --categorizeByGroup false --entryPoints ./src/index.ts",
 		"make:depgraph": "yarn madge src/main.ts --image dependency-graph.png",
-		"test": "yarn jest --coverage --maxWorkers=50%"
+		"test": "yarn jest --coverage"
 	},
 	"resolutions": {
 		"glob-parent": "^5.1.2"

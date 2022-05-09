@@ -24,6 +24,6 @@ module.exports = {
 	testRegex: '(/__tests__/.*|(\\.|/)(spec))\\.ts$',
 	testResultsProcessor: 'jest-sonar-reporter',
 	transform: {'^.+\\.(t|j)sx?$': '@swc/jest'},
-	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)']
-
+	transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
+	extensionsToTreatAsEsm: ['.tsx', '.tsx']
 };
