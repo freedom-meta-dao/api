@@ -285,6 +285,18 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@freedom-meta-dao/sdk@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@freedom-meta-dao/sdk/-/sdk-0.0.2.tgz#bafb699262319f7c5428d92046b952f24b4e24a2"
+  dependencies:
+    "@toreda/chk" "^0.3.0"
+    "@toreda/fate" "^0.6.7"
+    "@toreda/log" "^0.6.16"
+    "@toreda/strong-types" "^0.28.5"
+    "@toreda/time" "^0.1.6"
+    axios "^0.27.2"
+    big.js "^6.1.1"
+
 "@gulp-sourcemaps/identity-map@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-2.0.1.tgz#a6e8b1abec8f790ec6be2b8c500e6e68037c0019"
@@ -1250,9 +1262,22 @@
     webpack-cli "^4.9.2"
     yargs "^17.4.1"
 
+"@toreda/chk@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@toreda/chk/-/chk-0.3.0.tgz#ee700f16c52e6f74e01ac6081944c4d5d462f023"
+  dependencies:
+    "@toreda/fate" "^0.6.7"
+
 "@toreda/eslint-config@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@toreda/eslint-config/-/eslint-config-2.2.0.tgz#ee3e0bb8d2263461ea214e04c728f498f2b09278"
+
+"@toreda/fate@^0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@toreda/fate/-/fate-0.6.7.tgz#04ccf80686cfc1886db4117a2ce625a02390bb0f"
+  dependencies:
+    "@toreda/log" "^0.6.12"
+    "@toreda/strong-types" "^0.28.4"
 
 "@toreda/log@^0.6.12", "@toreda/log@^0.6.16":
   version "0.6.16"
@@ -1262,12 +1287,19 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@toreda/prettier-config/-/prettier-config-1.0.1.tgz#bd6c47352aa99560617f0f4a29f16ab7c3070b86"
 
-"@toreda/strong-types@^0.28.5":
+"@toreda/strong-types@^0.28.4", "@toreda/strong-types@^0.28.5":
   version "0.28.5"
   resolved "https://registry.yarnpkg.com/@toreda/strong-types/-/strong-types-0.28.5.tgz#a62bc6f27c0f4a7835b0a50422eee3aea4956607"
   dependencies:
     "@toreda/log" "^0.6.12"
     big.js "^6.1.1"
+
+"@toreda/time@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@toreda/time/-/time-0.1.6.tgz#580026d9efe92a78a6750d0bc910a9be4e4bcab3"
+  dependencies:
+    "@toreda/log" "^0.6.16"
+    "@toreda/strong-types" "^0.28.5"
 
 "@toreda/types@^2.12.0":
   version "2.12.0"
@@ -2127,6 +2159,13 @@ axios@^0.21.1:
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   dependencies:
     follow-redirects "^1.14.0"
+
+axios@^0.27.2:
+  version "0.27.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
+  dependencies:
+    follow-redirects "^1.14.9"
+    form-data "^4.0.0"
 
 babel-jest@^27.5.1:
   version "27.5.1"
@@ -4199,7 +4238,7 @@ flush-write-stream@^1.0.2:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.14.0:
+follow-redirects@^1.14.0, follow-redirects@^1.14.9:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.0.tgz#06441868281c86d0dda4ad8bdaead2d02dca89d4"
 
