@@ -60,6 +60,9 @@
 		"make:depgraph": "yarn madge src/main.ts --image dependency-graph.png",
 		"test": "yarn jest --coverage --maxWorkers=50%"
 	},
+	"resolutions": {
+		"glob-parent": "^5.1.2"
+	},
 	"prettier": "@toreda/prettier-config",
 	"dependencies": {
 		"@toreda/log": "^0.6.16",
