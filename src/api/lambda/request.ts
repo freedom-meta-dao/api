@@ -1,4 +1,5 @@
 import {ApiLambdaSession} from './session';
+import {Dynamo} from '../../dynamo';
 import {Log} from '@toreda/log';
 import type {Request} from 'express-serve-static-core';
 /**
@@ -10,6 +11,7 @@ import type {Request} from 'express-serve-static-core';
  * @category API
  */
 export interface ApiLambdaRequest extends Request {
+	ddb: Dynamo;
 	/** User info parsed from user JWT submitted with request. */
 	session: ApiLambdaSession;
 	/** DynamoDB wrapper instance for all DynamoDB operations. */

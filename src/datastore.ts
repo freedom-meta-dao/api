@@ -39,7 +39,6 @@ export class Datastore {
 		try {
 			const role = new CommunityRole(result.data);
 			fate.data = role;
-
 		} catch (e) {
 			fate.error(e);
 			fate.setErrorCode(datastoreError('create_failed', 'communityRole'));
@@ -86,11 +85,11 @@ export class Datastore {
 			return fate.setErrorCode(datastoreError('missing', 'ddb', 'arg'));
 		}
 
-		if (id === undefined || id === null) {
+		if (communityId === undefined || communityId === null) {
 			return fate.setErrorCode(datastoreError('missing', 'communityId', 'arg'));
 		}
 
-		if (typeof id !== 'string') {
+		if (typeof communityId !== 'string') {
 			return fate.setErrorCode(datastoreError('bad_format', 'communityId', 'arg'));
 		}
 

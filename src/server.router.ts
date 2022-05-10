@@ -4,18 +4,20 @@ import type {ApiLambdaRequest} from './api/lambda/request';
 import type {ApiLambdaResponse} from './api/lambda/response';
 import {ApiLambdaSession} from './api/lambda/session';
 import type {Application} from 'express';
+import {Dynamo} from './dynamo';
 import {Log} from '@toreda/log';
+import ModuleRouter from './module.router';
 
 export class ServerRouter {
 	public readonly express: Application;
 	public readonly log: Log;
 
-	constructor(express: Application, session: ApiLambdaSession, log: Log) {
+	constructor(express: Application, ddb: Dynamo, session: ApiLambdaSession, log: Log) {
 		this.express = express;
 		this.log = log;
 
 		// Call last after class members are set.
-		this.prepareRequest(express, session, log);
+		this.prepareRequest(express, ddb, session, log);
 	}
 
 	/**
@@ -24,11 +26,11 @@ export class ServerRouter {
 	 * @param session
 	 * @param log
 	 */
-	public prepareRequest(express: Application, session: ApiLambdaSession, log: Log): void {
+	public prepareRequest(express: Application, ddb: Dynamo, session: ApiLambdaSession, log: Log): void {
 		// Middleware called per request to enable CORS.
 		this.setupCORS(express);
 		// Add the DynamoDB Wrappper connection.
-		this.injectHelpers(express, session, log);
+		this.injectHelpers(express, ddb, session, log);
 		// NOTE: router setup MUST BE LAST.
 		// Routes to matching features route then sends response. Does not
 		// pass on to any further middleware.
@@ -41,7 +43,7 @@ export class ServerRouter {
 	 * @param session			Session including user details
 	 * @param log				Log instance to be used
 	 */
-	public injectHelpers(express: Application, session: ApiLambdaSession, log: Log): void {
+	public injectHelpers(express: Application, ddb: Dynamo, session: ApiLambdaSession, log: Log): void {
 		const middleware: RequestHandler = (
 			req: ApiLambdaRequest,
 			_res: ApiLambdaResponse,
@@ -49,6 +51,7 @@ export class ServerRouter {
 		) => {
 			req.log = log;
 			req.session = session;
+			req.ddb = ddb;
 			next();
 		};
 
@@ -82,7 +85,7 @@ export class ServerRouter {
 	public setupRouters(express: Application): void {
 		// The latest API version should always be first. API versions are
 		// different from app version, but support specific app versions.
-		//express.use('/v1.0', FeaturesRouter_v1_0);
+		express.use('/v1.0', ModuleRouter);
 
 		// Fallback route when URI does not match an existing route.
 		const middleware: RequestHandler = (

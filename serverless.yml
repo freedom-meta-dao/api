@@ -5,6 +5,9 @@ plugins:
   - serverless-offline
 
 custom:
+  apiGateway:
+    binaryMediaTypes:
+      - image/png
   esbuild:
     minify: true
     keepNames: true
